@@ -34,7 +34,7 @@ if(mode=='1'):
     while True:
         show_data(con)
 else:
-    app = QtGui.QApplication(sys.argv)
-    window = MyApp(con,ts,refresh_time,n_scaleX,n_scaleY)
-    window.show()
+    app = QtGui.QApplication(sys.argv) #Creates the aplication
+    window = MyApp(con,ts,refresh_time,n_scaleX,n_scaleY) #Creates the Main Window
+    window.show() #Shows the window
     sys.exit(app.exec_())
