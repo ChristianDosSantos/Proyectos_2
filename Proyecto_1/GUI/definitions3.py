@@ -93,22 +93,22 @@ qtCreatorFile = "graph.ui" # my Qt Designer file
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 class MyApp(QtGui.QMainWindow, Ui_MainWindow):
     def __init__(self,con,ts,refresh_time,n_scaleX,n_scaleY):
-        QtGui.QMainWindow.__init__(self)
+        QtGui.QMainWindow.__init__(self) #Main Window class
         Ui_MainWindow.__init__(self)
-        self.setupUi(self)
-        self.navigation = NavigationToolbar(self.canvas,self)
+        self.setupUi(self) #Sets the GUI design from the .UI file
+        self.navigation = NavigationToolbar(self.canvas,self) #Creates the toolbar for the plot
         self.hlayout.addWidget(self.navigation)
 
-        self.gCheck.stateChanged.connect(self.Grid)
+        self.gCheck.stateChanged.connect(self.Grid) #If grid button is checked executes Grid function
         self.gCheck.setStatusTip("Colocar Grid en la grafica")
-        self.tBox.activated[str].connect(self.changeTimeScale)
+        self.tBox.activated[str].connect(self.changeTimeScale) #If time selection is changed executes changeTimeScale function
         self.tBox.setStatusTip("Cambiar la escala temporal")
-        self.aBox.activated[str].connect(self.changeAmpScale)
+        self.aBox.activated[str].connect(self.changeAmpScale) #If Ampitude selection is changed executes changeAmpScale function
         self.aBox.setStatusTip("Cambiar la escala de Amplitud")
-        self.cha1Box.stateChanged.connect(self.check_Chd2)
-        self.cha2Box.stateChanged.connect(self.check_Cha2)
-        self.chd1Box.stateChanged.connect(self.check_Cha1)
-        self.chd2Box.stateChanged.connect(self.check_Chd1)
+        self.cha1Box.stateChanged.connect(self.check_Chd2)   #If Channel button is checked executes check_Chd2 function
+        self.cha2Box.stateChanged.connect(self.check_Cha2)  #If Channel button is checked executes check_Cha2 function
+        self.chd1Box.stateChanged.connect(self.check_Cha1) #If Channel button is checked executes check_Cha1 function
+        self.chd2Box.stateChanged.connect(self.check_Chd1) #If Channel button is checked executes check_Chd1 function
         self.con=con
         self.Ch_state=[False] * 4
         self.Ch_index=[]
@@ -167,28 +167,28 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
 
 
 
-    def check_Cha1(self,state):
+    def check_Cha1(self,state):  #If Channel button is checked shows the respective channel. Otherwise, it hides the channel
         if state == QtCore.Qt.Checked:
             self.Ch_state[0]=True
         else:
             self.Ch_state[0]=False
         self.plot_init()
 
-    def check_Cha2(self,state):
+    def check_Cha2(self,state): #If Channel button is checked shows the respective channel. Otherwise, it hides the channel
         if state == QtCore.Qt.Checked:
             self.Ch_state[1]=True
         else:
             self.Ch_state[1]=False
         self.plot_init()
 
-    def check_Chd1(self,state):
+    def check_Chd1(self,state): #If Channel button is checked shows the respective channel. Otherwise, it hides the channel
         if state == QtCore.Qt.Checked:
             self.Ch_state[2]=True
         else:
             self.Ch_state[2]=False
         self.plot_init()
 
-    def check_Chd2(self,state):
+    def check_Chd2(self,state): #If Channel button is checked shows the respective channel. Otherwise, it hides the channel
         if state == QtCore.Qt.Checked:
             self.Ch_state[3]=True
         else:
@@ -200,24 +200,24 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
             self.lines[i].set_ydata(self.con.data_fifo[:,self.Ch_index[i]])
         self.canvas.draw()
 
-    def Grid (self,state):
+    def Grid (self,state): #If Grid button is checked shows the Grid. Otherwise, it hides it
         if state == QtCore.Qt.Checked:
             self.set_grid=True
         else:
             self.set_grid=False
         self.plot_init()
 
-    def changeTimeScale(self,text):
+    def changeTimeScale(self,text): #If box option is changed, changes the time scale
         if text == "t = 1s":
-            self.con.set_fifo_len(2000) #Colocar cambio de escala
+            self.con.set_fifo_len(2000) 
         elif text == "t = 100ms":
-            self.con.set_fifo_len(200) #Colocar cambio de escala
+            self.con.set_fifo_len(200) 
         else:
-            self.con.set_fifo_len(20) #Colocar cambio de escala
+            self.con.set_fifo_len(20) 
 
         self.plot_init()
 
-    def changeAmpScale(self,text):
+    def changeAmpScale(self,text): #If box option is changed, changes the amplitude scale
         if text == "A = 1V":
             self.voltageMax=5
         elif text == "A = 100mV":

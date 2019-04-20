@@ -32,8 +32,10 @@ except:
     print('El número de puerto introducido no es válido, abortando ejecución...')
     exit()
 
+
 #Run GUI
 app = QtGui.QApplication(sys.argv)
 window = MyApp(con,ts,refresh_time,n_scaleX,n_scaleY)
 window.show()
 sys.exit(app.exec_())
+
