@@ -1,4 +1,4 @@
 *pyc
-*.d
-*.obj
-*.args
+*d
+*obj
+*args
