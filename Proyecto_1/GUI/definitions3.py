@@ -81,6 +81,7 @@ class flow_data(serial.Serial):
         for i in range(self.n):
             r=self.decode(self.data_read[4*i:4*i+4])
             self.data_fifo=np.vstack((r,self.data_fifo[:-1]))
+        #print(self.in_waiting)  #for debugging purposes only
         
     def set_fifo_len(self,len_fifo):  #Change fifo size
         self.len_fifo=len_fifo
@@ -140,7 +141,7 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         timer2.timeout.connect(self.refresh_image)
         timer2.start(refresh_time)
 
-        #con.set_buffer_size(rx_size = 100000, tx_size = 0)
+        con.set_buffer_size(rx_size = 10000, tx_size = 0)
 
     def plot_init(self):
 

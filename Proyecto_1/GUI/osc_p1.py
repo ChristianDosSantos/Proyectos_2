@@ -6,14 +6,15 @@ from definitions3 import *
 
 
 #Welcome
-print('Hello! Thank you using our service. Follow the steps for easy usage:')
+print('Bienvenido. Por favor siga las instrucciones para inicializar el software.\n')
 
-#Choose OS
-os = input('Please choose your OS, Linux (1) or Windows (0): ')
+#Choose OS and port
+os = input('Indique su Sistema Operativo, Linux (1) or Windows (0): ')
 if(os=='1'):
-    Port='/dev/ttyUSB0'  #ls -l  /dev/ttyUSB*
+    Port='/dev/ttyUSB'  #ls -l  /dev/ttyUSB*
 else:
-    Port='COM3'
+    Port='COM'
+Port = Port + input('Indique el número de puerto a usar: ')
 
 #Graphing info
 ts=250 #sampling time in ms
@@ -25,16 +26,14 @@ n_points=2000
 n_block=500
 
 #Communication object
-con = flow_data(Port,n_points,scale_factor,n_block)
+try:
+    con = flow_data(Port,n_points,scale_factor,n_block)
+except:
+    print('El número de puerto introducido no es válido, abortando ejecución...')
+    exit()
 
-mode = input('Choose an option, see measures (1) or graph (0): ')
-if(mode=='1'):
-    #Welcome
-    print("Measure from the ADC:\n")
-    while True:
-        show_data(con)
-else:
-    app = QtGui.QApplication(sys.argv)
-    window = MyApp(con,ts,refresh_time,n_scaleX,n_scaleY)
-    window.show()
-    sys.exit(app.exec_())
+#Run GUI
+app = QtGui.QApplication(sys.argv)
+window = MyApp(con,ts,refresh_time,n_scaleX,n_scaleY)
+window.show()
+sys.exit(app.exec_())
