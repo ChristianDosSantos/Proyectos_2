@@ -6,7 +6,7 @@
 
 2. Programar el microcontrolador DemoQE con los archivos presentes en el directorio ~/Proyecto1/MCU\_code/osc\_p1
 
-3. Ejecutar el archivo ~/Proyecto1/GUI/osc\_p1.py en un interprete de python 3. **No olvide que debe tener instalado las librerías PySerial, Numpy, matplotlib y PyQt4 **para poder correr el software exitosamente.
+3. Ejecutar el archivo ~/Proyecto1/GUI/osc\_p1.py en un interprete de python 3. **No olvide que debe tener instalado las librerías PySerial, Numpy, matplotlib y PyQt4**para poder correr el software exitosamente.
 
 4. El programa le consultará el sistema operativo en uso \(Linux o Windows\) y le pedirá que ingrese el número de puerto \(X\) al que está conectado el MCU \(/dev/ttyUSBX para Linux y COMX para Windows\)
 
