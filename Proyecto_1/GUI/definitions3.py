@@ -116,7 +116,7 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
 
         #graph settings
         print('Plotting...')
-        self.voltageMax=5.0
+        self.voltageMax=3.0
         self.n_scaleX=n_scaleX #number of time div
         self.n_scaleY=n_scaleY #number of voltage div
         self.set_grid=False
@@ -141,7 +141,7 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         timer2.timeout.connect(self.refresh_image)
         timer2.start(refresh_time)
 
-        con.set_buffer_size(rx_size = 10000, tx_size = 0)
+        con.set_buffer_size(rx_size = 15000, tx_size = 0)
 
     def plot_init(self):
 
@@ -150,7 +150,7 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         self.ax.set_xticklabels([]) #deletes labels from X-axes
         self.ax.set_ylim(0, self.voltageMax)
         plt.xticks(np.arange(0,self.con.len_fifo,self.con.len_fifo/(self.n_scaleX-1))) #Defines div for X-axes
-        plt.yticks(np.arange(0,self.voltageMax,self.voltageMax/(self.n_scaleY-1))) #Defines div for Y-axes
+        plt.yticks(np.arange(0,self.voltageMax,self.voltageMax/self.n_scaleY)) #Defines div for Y-axes
         if self.set_grid:
             self.ax.grid()
         self.lines=[]
@@ -219,11 +219,14 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
 
     def changeAmpScale(self,text): #If box option is changed, changes the amplitude scale
         if text == "A = 1V":
-            self.voltageMax=5
+            self.voltageMax=3
+            self.n_scaleY=6.0
         elif text == "A = 100mV":
             self.voltageMax=0.5
+            self.n_scaleY=5.0
         else:
             self.voltageMax=0.05
+            self.n_scaleY=5.0
         self.plot_init()
 
 #-------------------------------------------------------------------------

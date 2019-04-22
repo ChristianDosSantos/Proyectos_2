@@ -12,7 +12,7 @@
     <GeneratedByPE>
       <File Name="Generated_Code/AD1.h" FileDate="2019-04-20, 00:39:22" FileAge="1555736962817" FileType="45637" CompNumb="9" />
       <File Name="Generated_Code/Bit2.c" FileDate="2019-04-20, 00:39:22" FileAge="1555736962708" FileType="45637" CompNumb="24" />
-      <File Name="Sources/main.c" FileDate="2019-04-20, 00:39:22" FileAge="1555736962567" FileType="128" />
+      <File Name="Sources/main.c" FileDate="2019-04-22, 13:03:45" FileAge="1555954425268" FileType="128" />
       <File Name="Generated_Code/AD1.c" FileDate="2019-04-20, 00:39:22" FileAge="1555736962807" FileType="45637" CompNumb="9" />
       <File Name="Documentation/osc_p1_Settings.xml" FileDate="2019-03-11, 03:45:54" FileAge="1552292154587" FileType="3072" />
       <File Name="Generated_Code/AS1.h" FileDate="2019-04-20, 00:39:22" FileAge="1555736962847" FileType="45637" CompNumb="8" />
@@ -25,19 +25,19 @@
       <File Name="Generated_Code/Bit1.c" FileDate="2019-04-20, 00:39:22" FileAge="1555736962738" FileType="45637" CompNumb="20" />
       <File Name="Generated_Code/TI1.c" FileDate="2019-04-20, 00:39:22" FileAge="1555736962779" FileType="45637" CompNumb="10" />
       <File Name="Generated_Code/PE_Types.h" FileDate="2019-04-20, 00:39:22" FileAge="1555736962634" FileType="45637" />
-      <File Name="Generated_Code/Cpu.h" FileDate="2019-04-20, 00:39:22" FileAge="1555736962562" FileType="45637" CompNumb="4" />
       <File Name="Generated_Code/Bit3.c" FileDate="2019-04-20, 00:39:22" FileAge="1555736962648" FileType="45637" CompNumb="28" />
+      <File Name="Generated_Code/Cpu.h" FileDate="2019-04-20, 00:39:22" FileAge="1555736962562" FileType="45637" CompNumb="4" />
       <File Name="Generated_Code/Vectors.c" FileDate="2019-04-20, 00:39:22" FileAge="1555736962533" FileType="45637" CompNumb="4" />
       <File Name="Sources/Events.h" FileDate="2019-04-20, 00:39:22" FileAge="1555736962527" FileType="131328" />
       <File Name="Generated_Code/Cpu.c" FileDate="2019-04-20, 00:39:22" FileAge="1555736962549" FileType="45637" CompNumb="4" />
       <File Name="Sources/Events.c" FileDate="2019-04-20, 00:39:22" FileAge="1555736962516" FileType="131328" />
       <File Name="Generated_Code/IO_Map.h" FileDate="2019-04-20, 00:39:22" FileAge="1555736962597" FileType="45637" />
       <File Name="Generated_Code/PE_Error.h" FileDate="2019-04-20, 00:39:22" FileAge="1555736962626" FileType="45637" />
-      <File Name="Documentation/osc_p1_SIGNALS.txt" FileDate="2019-04-20, 00:39:22" FileAge="1555736962884" FileType="3072" />
       <File Name="Generated_Code/IO_Map.c" FileDate="2019-04-20, 00:39:22" FileAge="1555736962577" FileType="45637" />
+      <File Name="Documentation/osc_p1_SIGNALS.txt" FileDate="2019-04-22, 13:04:42" FileAge="1555954482743" FileType="3072" />
       <File Name="Documentation/osc_p1.txt" FileDate="2019-03-11, 03:45:54" FileAge="1552292154618" FileType="3072" />
       <File Name="Generated_Code/Bit2.h" FileDate="2019-04-20, 00:39:22" FileAge="1555736962728" FileType="45637" CompNumb="24" />
     </GeneratedByPE>
   </GeneratedFilesList>
-  <CodeGenReference>27</CodeGenReference>
+  <CodeGenReference>28</CodeGenReference>
 </CodeGenerationInfo>

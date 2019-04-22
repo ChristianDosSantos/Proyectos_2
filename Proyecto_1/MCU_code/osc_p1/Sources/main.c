@@ -92,21 +92,7 @@ void main(void)
 		  AD1_GetChanValue(1,&analogCh2);
 		  digitalCh1= Bit1_GetVal() > 0;
 		  digitalCh2= Bit2_GetVal() > 0;
-		  
-		  //------------------------------ TEST CODE BEGIN
-		  if(c == 9){
-			  if(value_test > 0)
-				  value_test=0;
-			  else
-				  value_test=3000;
-			  c=0;			  
-		  }
-		  else
-			  c++;
-		  analogCh1=value_test;
-		  
-		  //------------------------------ TEST CODE END
-		  
+		  		  
 		  //Set packet		  
 		  make_packet(analogCh1,analogCh2,digitalCh1,digitalCh2,&data);		  
 		  //Send data

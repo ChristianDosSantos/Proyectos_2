@@ -17,13 +17,13 @@ else:
 Port = Port + input('Indique el número de puerto a usar: ')
 
 #Graphing info
-ts=250 #sampling time in ms
-refresh_time=250 #time for updating graph in ms
-scale_factor=5.0/4095
+ts=400 #sampling time in ms
+refresh_time=400 #time for updating graph in ms
+scale_factor=3.0/4095
 n_scaleX=10.0
-n_scaleY=5.0
+n_scaleY=6.0
 n_points=2000
-n_block=500
+n_block=800
 
 #Communication object
 try:
