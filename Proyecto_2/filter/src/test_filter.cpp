@@ -28,7 +28,7 @@ int main(int argc, char * argv[]){
 		file << eval_filter(input);
 		if(i<n-1)
 			file << ",";
-	}	
+	}
 
 	return 0;
 }
