@@ -7,19 +7,19 @@ extern "C"{
 }
 
 //Variables for filter
-unsigned char f_Q=2;             
-unsigned char f_P=2; 			 
-unsigned short f_a[2]={1,2};     
-unsigned short f_b[3]={1,5,2};    
-unsigned short f_output[2]={1,0}; 
-unsigned short f_input[2]={0,0};  
+unsigned char f_Q=1;             
+unsigned char f_P=0; 			 
+signed short f_a[1]={-97};     
+signed short f_b[1]={24};    
+signed short f_output[1]={0}; 
+signed short f_input[0];  
 
 
 int main(int argc, char * argv[]){
 
 	int n=stoi(argv[1]); // sim time
-	unsigned short input=1; //input value
-
+	unsigned short input=10; //input value
+	
 	//File creation
 	ofstream file;
 	file.open("test/filter.dat", ios::out | ios::trunc);
@@ -29,6 +29,7 @@ int main(int argc, char * argv[]){
 		if(i<n-1)
 			file << ",";
 	}
+
 
 	return 0;
 }

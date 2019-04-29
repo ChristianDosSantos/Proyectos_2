@@ -10,7 +10,7 @@ data=np.array(data, dtype=int) #array of filter results
 
 #Plotting
 n_scale=10
-y_max=65000
+y_max=12000
 plt.plot(data)
 plt.title('Filter unitary step response')
 plt.xlabel('Discrete time [n]')
