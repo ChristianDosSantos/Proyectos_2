@@ -1,7 +1,6 @@
 #ifndef FILTER_
 #define FILTER_
-#define SAT_VALUE 4095
-#define MULT_SCALE 100
+#define MULT_SCALE 10000
 
 //Filter API definition
 
@@ -16,15 +15,16 @@ typedef struct{
 } filter;
 
 
-
 //Complementary functions
-signed short mult(signed short a,signed short b,signed short n); //Multiplies a and b, then the result is divided by n
-
-//Init function
-void init_filter(filter *x,unsigned char f_Q,unsigned char f_P,signed short *f_a,signed short *f_b,signed short *f_output,signed short *f_input);
+static inline signed short mult(signed short a,signed short b,signed short n); //Multiplies a and b, then the result is divided by n
 
 //Methods
-unsigned short eval_filter(filter *x,unsigned short new_input); //Calc a new output based on a new input
+
+//Init method
+void init_filter(filter *x,unsigned char f_Q,unsigned char f_P,signed short *f_a,signed short *f_b,signed short *f_output,signed short *f_input);
+
+//Evaluate filter output method
+signed short eval_filter(filter *x,signed short new_input); //Calc a new output based on a new input
 
 
 

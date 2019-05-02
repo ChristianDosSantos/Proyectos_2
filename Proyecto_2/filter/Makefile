@@ -1,4 +1,4 @@
-#Variables
+#General C/C++ Makefile.
 
 #Target
 TARGET = test_filter
