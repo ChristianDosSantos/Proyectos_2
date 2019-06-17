@@ -83,9 +83,12 @@ class flow_data(serial.Serial):
 
 #Angles function: return orientation in degrees based on accelerometer measures
 def angles(g_vector):  #g_vector must be a numpy array of the form [gx gy]
-	gx=g_vector[0]
-	gy=g_vector[1]
-	alfa=np.arcsin(gy/9.8)
-	beta=-np.arcsin(gx/np.sqrt(96.04-np.power(gy,2)))
+    m=6.62
+    b=-7.94
+    g_vector=(m*g_vector)+b
+    gx=g_vector[0]
+    gy=g_vector[1]
+    alfa=np.arcsin(gy/9.8)
+    beta=-np.arcsin(gx/np.sqrt(96.04-np.power(gy,2)))
 
-	return np.array([alfa,beta])*(180/np.pi)
+    return np.array([alfa,beta])*(180/np.pi)

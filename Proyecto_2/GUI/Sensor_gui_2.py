@@ -7,7 +7,7 @@ from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.backends.backend_qt4agg import NavigationToolbar2QT as NavigationToolbar
 from matplotlib.figure import Figure
 
-qtCreatorFile = "Sensor_4.ui" # my Qt Designer file 
+qtCreatorFile = "Sensor_3.ui" # my Qt Designer file 
 
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 

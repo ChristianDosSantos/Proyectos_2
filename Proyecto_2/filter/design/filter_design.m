@@ -13,7 +13,7 @@ Wn=fc/(fs/2);
 [B,A] = butter(N,Wn)
 
 %Graph
-h = fvtool(B,A);
+%h = fvtool(B,A);
 
 %B=1.0e-03 *[0.2414    0.4827    0.2414]
 %A=1.0000   -1.9556    0.9565

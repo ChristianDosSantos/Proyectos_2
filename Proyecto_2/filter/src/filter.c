@@ -1,14 +1,15 @@
 #include "filter.h"
 
 //Complementary functions
-static inline signed short  mult(signed short a,signed short b,signed short n){
+static inline signed short mult(int a,int b,int n){
 	return (a*b)/n;
 }
+
 
 //---------------------------------------------------------
 
 //Methods implementation
-void init_filter(filter *x,unsigned char f_Q,unsigned char f_P,signed short *f_a,signed short *f_b,signed short *f_output,signed short *f_input){
+void init_filter(filter *x,unsigned char f_Q,unsigned char f_P,int *f_a,int *f_b,int *f_output,int *f_input){
 	x->f_Q=f_Q;
 	x->f_P=f_P;
 	x->f_a=f_a;
@@ -17,10 +18,10 @@ void init_filter(filter *x,unsigned char f_Q,unsigned char f_P,signed short *f_a
 	x->f_input=f_input;
 }
 
-signed short eval_filter(filter *x,signed short new_input){
+signed short eval_filter(filter *x,int new_input){
 
 	//Define new output variable
-	signed short new_output=0;
+	int new_output=0;
 	unsigned char i;
 
 	//Calc output
@@ -43,5 +44,5 @@ signed short eval_filter(filter *x,signed short new_input){
 	if(new_output<0)
 		new_output=0;
 
-	return (unsigned short) new_output;
+	return  new_output;
 }
