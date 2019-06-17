@@ -13,7 +13,7 @@ unsigned char f_P=0;
 signed short f_a[1]={-9877};     
 signed short f_b[1]={123};    
 signed short f_output[1]={0}; 
-signed short f_input[0];  
+signed short f_input[1]={0};  
 
 
 

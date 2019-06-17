@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot  as plt
 
 #File handing
-file = open('test/filter.dat','r')
+file = open('filter.dat','r')
 data=file.read()
 data=data.split(',')  
 data=np.array(data, dtype=int) #array of filter results

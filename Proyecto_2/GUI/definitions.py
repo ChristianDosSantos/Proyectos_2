@@ -89,7 +89,7 @@ class flow_data(serial.Serial):
 
     
 #GUI CLASS
-qtCreatorFile = "graph.ui" # my Qt Designer file
+qtCreatorFile = "graph4.ui" # my Qt Designer file
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 class MyApp(QtGui.QMainWindow, Ui_MainWindow):
     def __init__(self,con,ts,refresh_time,n_scaleX,n_scaleY):

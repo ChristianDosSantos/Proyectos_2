@@ -1,7 +1,7 @@
 #include "filter.h"
 
 //Complementary functions
-static inline signed short  mult(signed short a,signed short b,signed short n){
+signed short  mult(signed short a,signed short b,signed short n){
 	return (a*b)/n;
 }
 
