@@ -7,3 +7,5 @@
 *dat
 *.metadata/
 *FLASH/
+*RemoteLaunch/
+*RemoteSystemsTempFiles/
