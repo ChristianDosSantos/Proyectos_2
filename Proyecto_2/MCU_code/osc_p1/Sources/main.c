@@ -37,6 +37,8 @@
 #include "EInt1.h"
 #include "EInt2.h"
 #include "Bit1.h"
+#include "Bit2.h"
+#include "Bit4.h"
 /* Include shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"
@@ -62,23 +64,17 @@
  
  //Filters
  filter fil1; //Instance
- unsigned char f_Q1=1;             
- unsigned char f_P1=0; 			 
- signed short f_a1[1]={-9877};     
- signed short f_b1[1]={123};    
- signed short f_output1[1]={0}; 
- signed short f_input1[1]=0;  
+ unsigned char f_P1=10; 			 
+ int f_b1[11]={2,3,7,12,17,18,17,12,7,3,2};   
+ int f_input1[10]={0};     
  
  filter fil2; //Instance
- unsigned char f_Q2=1;             
- unsigned char f_P2=0; 			 
- signed short f_a2[1]={-9877};     
- signed short f_b2[1]={123};    
- signed short f_output2[1]={0}; 
- signed short f_input2[1]=0; 
+ unsigned char f_P2=10; 			 
+ int f_b2[11]={2,3,7,12,17,18,17,12,7,3,2};    
+ int f_input2[10]={0}; 
  
  //Filter enable
- bool filter_en=0;
+ bool filter_en=1;
  
  //Sleep mode enable
  bool sleep_mode_en=1;
@@ -101,11 +97,11 @@ void main(void)
   AD1_Enable(); // ADC
   
   //Filters init
-  init_filter(&fil1,f_Q1,f_P1,f_a1,f_b1,f_output1,f_input1);
-  init_filter(&fil2,f_Q2,f_P2,f_a2,f_b2,f_output2,f_input2);
+  init_filter(&fil1,f_P1,f_b1,f_input1);
+  init_filter(&fil2,f_P2,f_b2,f_input2);
   
   //Init sleep mode
-  Bit1_PutVal(sleep_mode_en);
+  
     
   while(1){
 	  	  
@@ -132,7 +128,14 @@ void main(void)
 		  
 		  //Clock
 		  Bit3_PutVal(clk);
-		  clk= !clk;		  
+		  clk= !clk;
+		  
+		  //Filter enable
+		  filter_en=Bit2_GetVal() > 0;
+		  
+		  //Sleep mode
+		  sleep_mode_en=Bit4_GetVal() > 0;
+		  Bit1_PutVal(sleep_mode_en);
 	  } 	  
 	  	  
   }  

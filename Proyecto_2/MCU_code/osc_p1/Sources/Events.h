@@ -41,6 +41,8 @@
 #include "EInt1.h"
 #include "EInt2.h"
 #include "Bit1.h"
+#include "Bit2.h"
+#include "Bit4.h"
 
 
 void TI1_OnInterrupt(void);

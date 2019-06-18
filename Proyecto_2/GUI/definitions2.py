@@ -229,6 +229,18 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
                 self.textBrowser_des.setText('Estable')
                 self.textBrowser_des.setFont(QtGui.QFont("Ubuntu Medium Bold",14))
 
+            if self.con.data_fifo[0,2]:
+                self.progressBar_f.setValue(100)          
+            else:                
+                self.progressBar_f.setValue(0)
+
+
+            if self.con.data_fifo[0,3]==0:
+                self.progressBar_sm.setValue(100)    
+            else:                
+                self.progressBar_sm.setValue(0)                
+                
+            
 
             #Show angle values
             self.textBrowser_x.setText("X Axis =" + str(np.array(self.con.x_mean,dtype='int')) )       

@@ -11,7 +11,7 @@ data=np.array(data, dtype=int) #array of filter results
 #Plotting
 n_scale=10
 y_max=12000
-plt.plot(data)
+plt.plot(data,'o')
 plt.title('Filter step response')
 plt.xlabel('Discrete time [n]')
 plt.ylabel('Filter output')

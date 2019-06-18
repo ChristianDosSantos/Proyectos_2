@@ -4,16 +4,17 @@
 %Sampling freq
 fs=2000;
 %Cutoff freq
-fc=10;
+fc=5;
 %Order of the filter
-N=2;
+N=10;
 %
 Wn=fc/(fs/2);
 %Coefficients
-[B,A] = butter(N,Wn)
+[B,A] = fir1(N,Wn)
+round(B*1000)
 
 %Graph
-%h = fvtool(B,A);
+h = fvtool(B,A);
 
 %B=1.0e-03 *[0.2414    0.4827    0.2414]
 %A=1.0000   -1.9556    0.9565

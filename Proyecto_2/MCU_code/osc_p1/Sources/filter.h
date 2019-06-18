@@ -1,6 +1,6 @@
 #ifndef FILTER_
 #define FILTER_
-#define MULT_SCALE 10000
+#define MULT_SCALE 100
 
 //Filter API definition
 
@@ -8,24 +8,21 @@
 typedef struct{
 	unsigned char f_Q;	//Amount of past output values taken into account
 	unsigned char f_P;	//Amount of past input values taken into account
-	signed short* f_a; //Coefficients for past output values only
-	signed short* f_b; //Coefficients for current and past input values
-	signed short* f_output; //Contains  all PAST output values
-	signed short* f_input;  //Contains  all PAST input values
+	int* f_b; //Coefficients for current and past input values
+	int* f_input;  //Contains  all PAST input values
 } filter;
 
 
 //Complementary functions
-signed short mult(signed short a,signed short b,signed short n);
-
+int mult(int a,int b,int n); //Multiplies a and b, then the result is divided by n
 
 //Methods
 
 //Init method
-void init_filter(filter *x,unsigned char f_Q,unsigned char f_P,signed short *f_a,signed short *f_b,signed short *f_output,signed short *f_input);
+void init_filter(filter *x,unsigned char f_P,int *f_b,int *f_input);
 
 //Evaluate filter output method
-signed short eval_filter(filter *x,signed short new_input); //Calc a new output based on a new input
+int eval_filter(filter *x,int new_input); //Calc a new output based on a new input
 
 
 
