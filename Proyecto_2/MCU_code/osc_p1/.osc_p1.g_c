@@ -81,7 +81,7 @@
     </GenFiles>
     <SignalListFile>Documentation\osc_p1_SIGNALS.txt</SignalListFile>
     <DestinationCompiler>MetrowerksHCS08CC</DestinationCompiler>
-    <ProjectModificationStamp>34</ProjectModificationStamp>
+    <ProjectModificationStamp>36</ProjectModificationStamp>
   </Options>
   <CpuID_2>
     <Generated>false</Generated>
@@ -138,7 +138,7 @@
     <GenDriverVersion>01.40</GenDriverVersion>
     <GenEventModule>Events</GenEventModule>
     <HeaderAge>1322363219</HeaderAge>
-    <CodeAge>1322364177</CodeAge>
+    <CodeAge>1322471494</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>20</GenNumMethods>
     <SetHighSpeed>false</SetHighSpeed>
@@ -901,8 +901,8 @@
     <GenComponentVersion>02.086</GenComponentVersion>
     <GenDriverVersion>03.27</GenDriverVersion>
     <GenEventModule />
-    <HeaderAge>1322348140</HeaderAge>
-    <CodeAge>1322348140</CodeAge>
+    <HeaderAge>1322471494</HeaderAge>
+    <CodeAge>1322471494</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>9</GenNumMethods>
     <GetDir>false</GetDir>

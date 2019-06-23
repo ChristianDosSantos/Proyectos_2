@@ -65,13 +65,15 @@
  //Filters
  filter fil1; //Instance
  unsigned char f_P1=10; 			 
- int f_b1[11]={2,3,7,12,17,18,17,12,7,3,2};   
- int f_input1[10]={0};     
+ char f_b1[11]={2,3,7,12,17,18,17,12,7,3,2};   
+ char f_input1[10]={0};     
+   
  
  filter fil2; //Instance
  unsigned char f_P2=10; 			 
- int f_b2[11]={2,3,7,12,17,18,17,12,7,3,2};    
- int f_input2[10]={0}; 
+char f_b2[11]={2,3,7,12,17,18,17,12,7,3,2};   
+char f_input2[10]={0};     
+   
  
  //Filter enable
  bool filter_en=1;
@@ -117,7 +119,7 @@ void main(void)
 		  //Filter processing		  
 		  if(filter_en){			  
 			  analogCh1=eval_filter(&fil1,analogCh1);
-			  analogCh2=eval_filter(&fil1,analogCh2);			  
+			  analogCh2=eval_filter(&fil2,analogCh2);			  
 		  }			  		  
 		  //Set packet		  
 		  make_packet(analogCh1,analogCh2,filter_en,sleep_mode_en,&data);		  

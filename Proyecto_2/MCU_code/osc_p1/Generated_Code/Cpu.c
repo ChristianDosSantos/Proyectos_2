@@ -7,7 +7,7 @@
 **     Version     : Component 01.003, Driver 01.40, CPU db: 3.00.067
 **     Datasheet   : MC9S08QE128RM Rev. 2 6/2007
 **     Compiler    : CodeWarrior HCS08 C Compiler
-**     Date/Time   : 2019-06-17, 21:40, # CodeGen: 41
+**     Date/Time   : 2019-06-19, 10:02, # CodeGen: 43
 **     Abstract    :
 **         This component "MC9S08QE128_80" contains initialization 
 **         of the CPU and provides basic methods and events for 
@@ -255,12 +255,12 @@ void PE_low_level_init(void)
   clrReg8Bits(PTADD, 0x0CU);            
   /* PTAPE: PTAPE3=1,PTAPE2=1 */
   setReg8Bits(PTAPE, 0x0CU);            
-  /* PTHD: PTHD7=0 */
-  clrReg8Bits(PTHD, 0x80U);             
-  /* PTHPE: PTHPE7=0 */
-  clrReg8Bits(PTHPE, 0x80U);            
-  /* PTHDD: PTHDD7=1 */
-  setReg8Bits(PTHDD, 0x80U);            
+  /* PTCD: PTCD6=0 */
+  clrReg8Bits(PTCD, 0x40U);             
+  /* PTCPE: PTCPE6=0 */
+  clrReg8Bits(PTCPE, 0x40U);            
+  /* PTCDD: PTCDD6=1 */
+  setReg8Bits(PTCDD, 0x40U);            
   /* PTASE: PTASE7=0,PTASE6=0,PTASE4=0,PTASE3=0,PTASE2=0,PTASE1=0,PTASE0=0 */
   clrReg8Bits(PTASE, 0xDFU);            
   /* PTBSE: PTBSE7=0,PTBSE6=0,PTBSE5=0,PTBSE4=0,PTBSE3=0,PTBSE2=0,PTBSE1=0,PTBSE0=0 */

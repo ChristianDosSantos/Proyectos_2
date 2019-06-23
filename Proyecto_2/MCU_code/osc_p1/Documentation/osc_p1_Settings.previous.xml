@@ -1192,12 +1192,7 @@ rising or falling edge
     <Properties>
       <Component_name v="Bit2" />
       <Pin_for_I_O v="PTA2_KBI1P2_SDA1_ADP2" />
-      <Pull_resistor sel_value="no pull resistor">
-        
-autoselected pull
-
-        <EmptySection_DummyValue />
-      </Pull_resistor>
+      <Pull_resistor v="pull up" />
       <Open_drain sel_value="The settings is irrelevant for input direction">
         
 push-pull
@@ -1234,12 +1229,7 @@ push-pull
     <Properties>
       <Component_name v="Bit4" />
       <Pin_for_I_O v="PTD2_KBI2P2_MISO2" />
-      <Pull_resistor sel_value="no pull resistor">
-        
-autoselected pull
-
-        <EmptySection_DummyValue />
-      </Pull_resistor>
+      <Pull_resistor v="pull up" />
       <Open_drain sel_value="The settings is irrelevant for input direction">
         
 push-pull

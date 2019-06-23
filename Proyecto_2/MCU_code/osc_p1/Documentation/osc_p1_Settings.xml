@@ -1159,11 +1159,11 @@ rising or falling edge
     <Enabled v="Y" />
     <Properties>
       <Component_name v="Bit1" />
-      <Pin_for_I_O v="PTH7_SDA2" />
+      <Pin_for_I_O v="PTC6_RxD2_ACMP2PLUS" />
       <Pull_resistor v="no pull resistor" />
       <Open_drain v="push-pull" />
-      <Slew_rate_control_for_PTH7 v="no" />
-      <Drive_strength_for_PTH7 v="High" />
+      <Slew_rate_control_for_PTC6 v="no" />
+      <Drive_strength_for_PTC6 v="High" />
       <Direction v="Output" />
       <group name="Initialization">
         <Init__direction v="Output" />

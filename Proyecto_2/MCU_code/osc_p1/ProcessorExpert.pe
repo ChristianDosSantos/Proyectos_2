@@ -3,8 +3,8 @@
   <Header>
     <Name>osc_p1</Name>
     <SavedBy>JesusC</SavedBy>
-    <ModificationStamp>34</ModificationStamp>
-    <Date>2019-06-17</Date>
+    <ModificationStamp>36</ModificationStamp>
+    <Date>2019-06-19</Date>
     <IDE>Eclipse IDE</IDE>
     <PEversion>1.9.0.RT6_b1411-0406</PEversion>
   </Header>
@@ -29,7 +29,7 @@
     <UseExistingModules>true</UseExistingModules>
     <RenamePeripheries>false</RenamePeripheries>
     <Autodependency>true</Autodependency>
-    <ProjectCompNumb>45</ProjectCompNumb>
+    <ProjectCompNumb>48</ProjectCompNumb>
     <DelUnusedPreviouslyGenFiles>true</DelUnusedPreviouslyGenFiles>
     <GeneratedCodeFrozen>false</GeneratedCodeFrozen>
     <AssignInitComponentNameToPrph>true</AssignInitComponentNameToPrph>
@@ -13458,7 +13458,7 @@
         <ItemSymbol>_Pin</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
-        <Value>PTH7_SDA2</Value>
+        <Value>PTC6_RxD2_ACMP2PLUS</Value>
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>

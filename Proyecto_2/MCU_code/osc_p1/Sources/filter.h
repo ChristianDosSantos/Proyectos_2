@@ -14,15 +14,15 @@ typedef struct{
 
 
 //Complementary functions
-int mult(int a,int b,int n); //Multiplies a and b, then the result is divided by n
+char mult(char a,char b,char n); //Multiplies a and b, then the result is divided by n
 
 //Methods
 
 //Init method
-void init_filter(filter *x,unsigned char f_P,int *f_b,int *f_input);
+void init_filter(filter *x,unsigned char f_P,char *f_b,char *f_input);
 
 //Evaluate filter output method
-int eval_filter(filter *x,int new_input); //Calc a new output based on a new input
+int eval_filter(filter *x,unsigned short new_input); //Calc a new output based on a new input
 
 
 
